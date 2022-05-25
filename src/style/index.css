@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 .active {
-    color: #53CDBD !important;
+    color: #000 !important;
     padding-bottom: 2px;
     border-bottom: 2px solid #53CDBD;
+    font-weight: bold;
 }
 .active:hover {
     color: #53CDBD !important;
@@ -28,8 +29,4 @@ a:hover {
 .underline-position {
     text-decoration: underline;
     text-underline-position: under;
-}
-.titleBox{
-    height: 100px;
-    padding-top: 20px;
 }
