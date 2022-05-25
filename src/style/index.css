@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    color: #53CDBD !important;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #53CDBD;
+}
+.active:hover {
+    color: #53CDBD !important;
+}
+body {
+    font-size: 16px !important;
+}
+a {
+    color: unset;
+}
+a:hover {
+    color: unset;
+}
+.notSelected {
+    color: black;
+}
+.notSelected:hover {
+    color: #53CDBD !important;
+}
+.underline-position {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.titleBox{
+    height: 100px;
+    padding-top: 20px;
+}
