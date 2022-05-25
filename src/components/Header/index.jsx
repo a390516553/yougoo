@@ -3,13 +3,14 @@ import { ReactComponent as Burger } from "@images/burger.svg";
 import { ReactComponent as X } from "@images/x.svg";
 import home_logo from "@images/home-logo.png";
 import { NavLink } from "react-router-dom";
+import { Button } from "antd";
 
 function Header() {
   return (
     <Disclosure>
       {({ open }) => (
         <>
-          <header className="max-w-screen-xl mx-auto my-0">
+          <header className="w-4/5 mx-auto my-0">
             {/* md:px-24 px-4 shadow*/}
             <div className="flex h-auto py-6 justify-between">
               {/* justify-around */}
@@ -22,7 +23,8 @@ function Header() {
                 {/* flex flex-row items-center justify-end space-x-12 */}
                 <div className="hidden sm:block cursor-pointer">
                   <NavLink className="notSelected" to="/">
-                    首页
+                    {/* 首页 */}
+                    Home
                   </NavLink>
                 </div>
 
@@ -54,7 +56,8 @@ function Header() {
                 </div>
                 <div className="hidden sm:block cursor-pointer">
                   <NavLink className="notSelected" to="/t">
-                    自助下单
+                    {/* 自助下单 */}
+                    Self-Order
                   </NavLink>
                 </div>
                 <div className="sm:hidden flex items-center">
@@ -76,7 +79,12 @@ function Header() {
                 </div>
               </div>
               <div className="flex flex-row items-center">
-                <p>11111</p>
+                <Button className="" type="primary" shape="round" size="large">
+                  登陆
+                </Button>
+                <Button className="" type="primary" shape="round" size="large">
+                  立即注册
+                </Button>
               </div>
             </div>
           </header>
