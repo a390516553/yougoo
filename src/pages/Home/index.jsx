@@ -16,9 +16,18 @@ import React from "react";
 // import seo from "@images/seo.png";
 // import macbook from "@images/macbook.png";
 // import { Button } from "antd";
+// var scrollFlag = false;
+// window.onscroll = function () {
+//   let scrollHigh =
+//     document.documentElement.scrollTop || document.body.scrollTop;
+//   scrollFlag = scrollHigh > -100 ? true : false;
+//   console.log("scrollFun------------", scrollHigh);
+//   console.log("scrollFlag------------", scrollFlag);
+// };
 
 function Home() {
   return (
+    // onScroll={scrollFun}
     <div>
       <div className="home_top">
         <div className="home_menu">
@@ -303,6 +312,9 @@ function Home() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="home_round">
+        <div className="home_round_up"></div>
       </div>
     </div>
   );
