@@ -16,16 +16,26 @@ import React from "react";
 // import seo from "@images/seo.png";
 // import macbook from "@images/macbook.png";
 // import { Button } from "antd";
-// var scrollFlag = false;
+// let scrollFlag, scrollHigh;
 // window.onscroll = function () {
-//   let scrollHigh =
-//     document.documentElement.scrollTop || document.body.scrollTop;
+//   scrollHigh = document.documentElement.scrollTop || document.body.scrollTop;
 //   scrollFlag = scrollHigh > -100 ? true : false;
-//   console.log("scrollFun------------", scrollHigh);
-//   console.log("scrollFlag------------", scrollFlag);
+//     console.log("scrollFun------------", scrollHigh);
+//     console.log("scrollFlag------------", scrollFlag);
 // };
 
 function Home() {
+  let scrollFlag, scrollHigh;
+  window.onscroll = function () {
+    scrollHigh = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollHigh > 100) {
+    } else {
+      scrollFlag = null;
+    }
+    // scrollFlag = scrollHigh > 100 ? "block" : "none";
+    // console.log("scrollFun------------", scrollHigh);
+    // console.log("scrollFlag------------", scrollFlag);
+  };
   return (
     // onScroll={scrollFun}
     <div>
@@ -99,9 +109,9 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_two"></div>
               <div className="li_bottom">
-                <div className="buy_buttom">直播套餐</div>
+                <div className="buy_buttom li_blue">直播套餐</div>
                 <div className="buy_desc">Facebook 人气流量套餐</div>
                 <div className="buy_price">¥ 900+</div>
               </div>
@@ -117,7 +127,7 @@ function Home() {
             <li>
               <div className="li_top li_four"></div>
               <div className="li_bottom">
-                <div className="buy_buttom">直播套餐</div>
+                <div className="buy_buttom li_blue">直播套餐</div>
                 <div className="buy_desc">Facebook 在线观众包月</div>
                 <div className="buy_price">¥ 900+</div>
               </div>
@@ -146,7 +156,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_two"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">YouTube 服务</div>
                 <div className="buy_desc">YouTube 播放观看次数 1000 View</div>
@@ -154,7 +164,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_three"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">YouTube 服务</div>
                 <div className="buy_desc">YouTube 指定IP播放 1000次</div>
@@ -162,7 +172,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_four"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">YouTube 服务</div>
                 <div className="buy_desc">YouTube 分享、Like赞 100次</div>
@@ -193,7 +203,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_two"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Facebook 服务</div>
                 <div className="buy_desc">Facebook 播放、分享、评论</div>
@@ -201,7 +211,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_three"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Facebook 服务</div>
                 <div className="buy_desc">Facebook 主页点评</div>
@@ -209,7 +219,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_four"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Facebook 服务</div>
                 <div className="buy_desc">Facebook 直播数据流量1000次</div>
@@ -240,7 +250,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_two"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Instagram 服务</div>
                 <div className="buy_desc">Instagram 欧美粉 100个</div>
@@ -248,7 +258,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_three"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Instagram 服务</div>
                 <div className="buy_desc">Instagram 未来 100赞 30张</div>
@@ -256,7 +266,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_four"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Instagram 服务</div>
                 <div className="buy_desc">Instagram 赞like 1000个</div>
@@ -287,7 +297,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_two"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Twitter 服务</div>
                 <div className="buy_desc">Twitter 粉丝 100个</div>
@@ -295,7 +305,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_three"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Twitter 服务</div>
                 <div className="buy_desc">Twitter 转发 100次</div>
@@ -303,7 +313,7 @@ function Home() {
               </div>
             </li>
             <li>
-              <div className="li_top li_one"></div>
+              <div className="li_top li_four"></div>
               <div className="li_bottom">
                 <div className="buy_buttom">Twitter 服务</div>
                 <div className="buy_desc">Twitter 收藏like 100次</div>
@@ -313,8 +323,17 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className="home_round">
-        <div className="home_round_up"></div>
+      {/* {scrollFlag ? (
+        <div className="home_round">
+          <div className="home_round_up"></div>
+        </div>
+      ) : null} */}
+      {/* <div className="home_round">
+        {scrollFlag ? <div className="home_round_up"></div> : null}
+      </div> */}
+      {/* style={{ verticalAlign: "top" }} */}
+      <div className="home_round" style={{ display: scrollFlag }}>
+        {/* <div className="home_round_up"></div> */}
       </div>
     </div>
   );
